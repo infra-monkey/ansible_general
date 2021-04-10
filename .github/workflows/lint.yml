@@ -11,13 +11,13 @@ on:
 
 jobs:
   build:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: "3.6"
+          python-version: "3.8"
 
       - name: Run ansible-lint
         uses: ansible/ansible-lint-action@master
