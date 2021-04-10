@@ -1,0 +1,8 @@
+---
+enable_epel: True
+pkglist:
+  - htop
+  - zsh
+  - zsh-syntax-highlighting
+  - vim
+...
