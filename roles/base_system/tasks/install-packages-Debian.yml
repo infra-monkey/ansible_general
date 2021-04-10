@@ -6,30 +6,30 @@
     owner: 'root'
     group: 'root'
     mode: '0644'
-  become: True
+  become: true
   when: use_debian_backports
 - name: "Ensure unwanted packages are absent"
   apt:
     name: "{{ pkglist_absent }}"
-    update_cache: True
-    autoremove: True
+    update_cache: true
+    autoremove: true
     state: absent
-    purge: True
-  become: True
+    purge: true
+  become: true
 - name: "Install required packages"
   apt:
     name: "{{ pkglist }}"
-    update_cache: True
-    autoremove: True
+    update_cache: true
+    autoremove: true
     state: present
-  become: True
+  become: true
 - name: "Install required backport packages"
   apt:
     name: "{{ backport_pkglist }}"
     default_release: "{{ backport_repo_name }}"
-    update_cache: True
-    autoremove: True
+    update_cache: true
+    autoremove: true
     state: latest
-  become: True
+  become: true
   when: use_debian_backports and backport_pkglist is defined
 ...

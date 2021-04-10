@@ -1,5 +1,5 @@
 ---
-enable_epel: True
+enable_epel: true
 pkglist:
   - htop
   - zsh
