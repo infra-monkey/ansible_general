@@ -1,2 +1,3 @@
-# ansible_general
-Ansible collection that provide general purpose roles and playbooks
+# Ansible Collection - infra_monkey.ansible_general
+
+Documentation for the collection.
