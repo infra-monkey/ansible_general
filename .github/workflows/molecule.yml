@@ -28,4 +28,5 @@ jobs:
       - name: Test with molecule
         working-directory: ./roles
         run: |
+          pwd
           molecule test
