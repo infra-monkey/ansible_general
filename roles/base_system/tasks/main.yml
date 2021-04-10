@@ -1,6 +1,6 @@
 ---
 - name: "Include os specific variables"
-  include_vars: "packages-{{ ansible_os_family }}-{{ ansible_distribution_version }}.yml"
+  include_vars: "packages-{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
 - name: "Call install-packages task for RedHat like systems"
   include_tasks: install-packages-RedHat.yml
   when: ansible_os_family == "RedHat"

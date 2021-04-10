@@ -29,7 +29,7 @@
     default_release: "{{ backport_repo_name }}"
     update_cache: true
     autoremove: true
-    state: latest
+    state: present
   become: true
   when: use_debian_backports and backport_pkglist is defined
 ...
