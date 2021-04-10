@@ -1,0 +1,11 @@
+---
+pkglist:
+  - htop
+  - zsh
+  - zsh-syntax-highlighting
+  - acl
+  - resolvconf
+  - python3-apt
+  - vim
+  - ssl-cert
+...

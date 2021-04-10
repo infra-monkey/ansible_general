@@ -1,0 +1,35 @@
+---
+- name: "Enable backports repo"
+  template:
+    src: "backports-{{ ansible_os_family }}.list.j2"
+    dest: "/etc/apt/sources.list.d/{{ backport_repo_name }}.list"
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  become: true
+  when: use_debian_backports
+- name: "Ensure unwanted packages are absent"
+  apt:
+    name: "{{ pkglist_absent }}"
+    update_cache: true
+    autoremove: true
+    state: absent
+    purge: true
+  become: true
+- name: "Install required packages"
+  apt:
+    name: "{{ pkglist }}"
+    update_cache: true
+    autoremove: true
+    state: present
+  become: true
+- name: "Install required backport packages"
+  apt:
+    name: "{{ backport_pkglist }}"
+    default_release: "{{ backport_repo_name }}"
+    update_cache: true
+    autoremove: true
+    state: latest
+  become: true
+  when: use_debian_backports and backport_pkglist is defined
+...
