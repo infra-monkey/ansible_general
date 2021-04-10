@@ -1,3 +1,3 @@
 ---
-use_debian_backports: False
+use_debian_backports: false
 ...

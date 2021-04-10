@@ -5,10 +5,10 @@ version: 0.0.1
 
 readme: README.md
 authors:
-- Antoine Gatineau <antoine.gatineau@infra-monkey.com>
+  - Antoine Gatineau <antoine.gatineau@infra-monkey.com>
 description: A ansible collection for general purpose linux system management
 license:
-- Apache-2.0
+  - Apache-2.0
 tags:
   - "ansible"
   - "collection"
