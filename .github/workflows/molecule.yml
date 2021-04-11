@@ -19,6 +19,8 @@ jobs:
           - centos7
           - debian9
           - debian10
+        role-name:
+          - base_system
     steps:
       - uses: actions/checkout@v2
         with:
@@ -37,4 +39,4 @@ jobs:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
           MOLECULE_DISTRO: ${{ matrix.distro }}
-        run: molecule test
+        run: molecule test -s ${{ matrix.role-name }}
