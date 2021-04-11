@@ -11,15 +11,15 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        # python-version: [3.6, 3.7, 3.8]
+        python-version: 3.8
         distro:
           - centos8
-          - centos7
-          - fedora33
-          - ubuntu2004
-          - ubuntu1804
-          - debian10
-
+          # - centos7
+          # - fedora33
+          # - ubuntu2004
+          # - ubuntu1804
+          # - debian10
     steps:
       - uses: actions/checkout@v2
         with:
@@ -33,7 +33,7 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install molecule[ansible] flake8
       - name: Test with molecule
-        working-directory: molecule_check/roles
+        working-directory: molecule_check
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'

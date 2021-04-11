@@ -1,6 +1,7 @@
 ---
 - name: Converge
   hosts: all
+  connection: local
   tasks:
     - name: "Include base_system"
       include_role:
