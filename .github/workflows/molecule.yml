@@ -15,14 +15,12 @@ jobs:
         distro:
           - centos8
           # - centos7
-          # - fedora33
-          # - ubuntu2004
-          # - ubuntu1804
           # - debian10
     steps:
       - uses: actions/checkout@v2
         with:
           path: molecule_check
+          image: "${{ matrix.distro }}"
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
