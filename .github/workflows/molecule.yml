@@ -12,13 +12,13 @@ jobs:
       max-parallel: 4
       matrix:
         python-version:
-          # - 3.7
+          - 3.7
           - 3.8
         distro:
           - centos8
-          # - centos7
-          # - debian9
-          # - debian10
+          - centos7
+          - debian9
+          - debian10
     steps:
       - uses: actions/checkout@v2
         with:
