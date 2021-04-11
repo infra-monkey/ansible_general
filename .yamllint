@@ -34,4 +34,4 @@ rules:
   new-lines:
     type: unix
   trailing-spaces: enable
-  truthy: disable
+  truthy: enable
