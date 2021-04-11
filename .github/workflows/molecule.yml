@@ -6,17 +6,24 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  build:
+  molecule-check:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
       matrix:
         python-version: [3.6, 3.7, 3.8]
+        distro:
+          - centos8
+          - centos7
+          - fedora33
+          - ubuntu2004
+          - ubuntu1804
+          - debian10
 
     steps:
       - uses: actions/checkout@v2
         with:
-          path: molecule_demo
+          path: molecule_check
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -24,8 +31,11 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install molecule[ansible]
+          python3 -m pip install molecule
       - name: Test with molecule
-        working-directory: roles
-        run: |
-          molecule test
+        working-directory: molecule_check/roles
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
+        run: molecule test
