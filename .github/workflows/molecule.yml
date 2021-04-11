@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install molecule[ansible]
+          python3 -m pip install molecule[ansible] flake8
       - name: Test with molecule
         working-directory: molecule_check/roles
         env:
