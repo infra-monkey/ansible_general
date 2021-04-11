@@ -11,10 +11,13 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version:
+          - 3.7
+          - 3.8
         distro:
           - centos8
           # - centos7
+          # - debian9
           # - debian10
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install molecule[ansible] flake8
+          python3 -m pip install ansible molecule[docker] docker
       - name: Test with molecule
         working-directory: molecule_check
         env:
