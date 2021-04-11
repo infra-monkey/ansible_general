@@ -2,7 +2,7 @@
 dependency:
   name: galaxy
 driver:
-  name: delegated
+  name: docker
 platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest"
