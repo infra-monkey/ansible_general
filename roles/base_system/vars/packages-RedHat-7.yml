@@ -1,9 +1,0 @@
----
-enable_epel: true
-pkglist:
-  - htop
-  - zsh
-  - zsh-syntax-highlighting
-  - redhat-lsb
-  - vim
-...
