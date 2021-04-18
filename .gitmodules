@@ -1,8 +1,16 @@
 [submodule "roles/base_system"]
 	path = roles/base_system
 	url = https://github.com/infra-monkey/ansible_role_base_system.git
-	branch = main
+	branch = 0.0.3
 [submodule "roles/postfix_email_client"]
 	path = roles/postfix_email_client
 	url = https://github.com/infra-monkey/ansible_role_postfix_email_client.git
-	branch = main
+	branch = 0.0.2
+[submodule "roles/zabbix_agent"]
+	path = roles/zabbix_agent
+	url = https://github.com/infra-monkey/ansible_role_zabbix_agent.git
+	branch = 0.0.1
+[submodule "roles/linux_user"]
+	path = roles/linux_user
+	url = https://github.com/infra-monkey/ansible_role_linux_user.git
+	branch = 0.0.1
