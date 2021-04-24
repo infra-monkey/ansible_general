@@ -11,10 +11,13 @@ roles:
 
 ## add a submodule
 
-git submodule add -b main --name "roles/linux_user" https://github.com/infra-monkey/ansible_role_linux_user.git roles/linux_user
+  git submodule add -b main --name "roles/linux_user" https://github.com/infra-monkey/ansible_role_linux_user.git roles/linux_user
 
 ## update a submodule to a new tag
 
-git submodule deinit --all
-change tag values
-git submodule update --init --recursive
+  cd roles/linux_user
+  git pull
+  git checkout <tag>
+  cd ../..
+  git commit "update to tag <tag>
+  git push
