@@ -14,3 +14,7 @@
 	path = roles/linux_user
 	url = https://github.com/infra-monkey/ansible_role_linux_user.git
 	branch = 0.0.1
+[submodule "roles/postgresql_backup"]
+	path = roles/postgresql_backup
+	url = https://github.com/infra-monkey/ansible_role_postgresql_backup.git
+	branch = 0.0.1

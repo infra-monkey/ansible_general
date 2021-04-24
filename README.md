@@ -6,6 +6,7 @@ roles:
   - infra_monkey.ansible_general.postfix_email_client
   - infra_monkey.ansible_general.linux_user
   - infra_monkey.ansible_general.zabbix_agent
+  - infra_monkey.ansible_general.postgresql_backup
 
 
 ## add a submodule
