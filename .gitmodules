@@ -18,3 +18,7 @@
 	path = roles/postgresql_backup
 	url = https://github.com/infra-monkey/ansible_role_postgresql_backup.git
 	branch = 0.0.1
+[submodule "roles/cloud_init"]
+	path = roles/cloud_init
+	url = https://github.com/infra-monkey/ansible_role_cloud_init.git
+	branch = main
