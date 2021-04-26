@@ -22,3 +22,11 @@
 	path = roles/cloud_init
 	url = https://github.com/infra-monkey/ansible_role_cloud_init.git
 	branch = main
+[submodule "roles/host_info_facts"]
+	path = roles/host_info_facts
+	url = https://github.com/infra-monkey/ansible_role_host_info_facts.git
+	branch = main
+[submodule "roles/motd"]
+	path = roles/motd
+	url = https://github.com/infra-monkey/ansible_role_motd.git
+	branch = main

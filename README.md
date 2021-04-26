@@ -2,11 +2,14 @@
 Ansible collection that provide general purpose roles and playbooks
 
 roles:
-  - infra_monkey.ansible_general.base_system
-  - infra_monkey.ansible_general.postfix_email_client
-  - infra_monkey.ansible_general.linux_user
-  - infra_monkey.ansible_general.zabbix_agent
-  - infra_monkey.ansible_general.postgresql_backup
+- infra_monkey.ansible_general.base_system
+- infra_monkey.ansible_general.postfix_email_client
+- infra_monkey.ansible_general.linux_user
+- infra_monkey.ansible_general.zabbix_agent
+- infra_monkey.ansible_general.postgresql_backup
+- infra_monkey.ansible_general.host_info_facts
+- infra_monkey.ansible_general.motd
+- infra_monkey.ansible_general.cloud_init
 
 
 ## add a submodule
