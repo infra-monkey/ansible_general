@@ -7,9 +7,11 @@ roles:
 - infra_monkey.ansible_general.linux_user
 - infra_monkey.ansible_general.zabbix_agent
 - infra_monkey.ansible_general.postgresql_backup
+- infra_monkey.ansible_general.etcd_backup
 - infra_monkey.ansible_general.host_info_facts
 - infra_monkey.ansible_general.motd
 - infra_monkey.ansible_general.cloud_init
+- infra_monkey.ansible_general.root_ca
 
 
 ## add a submodule
