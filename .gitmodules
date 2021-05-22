@@ -26,3 +26,15 @@
 	path = roles/motd
 	url = https://github.com/infra-monkey/ansible_role_motd.git
 	branch = main
+[submodule "roles/root_ca"]
+	path = roles/root_ca
+	url = https://github.com/infra-monkey/ansible_role_root_ca.git
+	branch = main
+[submodule "roles/etcd_backup"]
+	path = roles/etcd_backup
+	url = https://github.com/infra-monkey/ansible_role_etcd_backup.git
+	branch = main
+[submodule "roles/postgresql_backup"]
+	path = roles/postgresql_backup
+	url = https://github.com/infra-monkey/ansible_role_postgresql_backup.git
+	branch = main
