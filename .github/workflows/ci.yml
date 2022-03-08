@@ -26,7 +26,8 @@ jobs:
           override-deps: |
             rich>=9.5.1,<11.0.0
           targets: |
-            roles/
+            roles/*/
+            roles/*/*/*.yml
             playbooks/*.yml
             playbooks/*/*.yml
       - name: Run yaml-lint
