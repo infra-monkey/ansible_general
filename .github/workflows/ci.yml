@@ -25,7 +25,7 @@ jobs:
             rich>=9.5.1,<11.0.0
           targets: |
             roles/*/*/*.yml
-          args: "--exclude roles/*/.github --exclude roles/*/molecule"
+          args: "--exclude roles/*/.github/ --exclude roles/*/molecule/"
       - name: Run yaml-lint
         uses: ibiqlik/action-yamllint@v3
         with:
