@@ -5,8 +5,7 @@ extends: default
 ignore: |
   galaxy.yml
   .github/
-  roles/*/.github/
-  roles/*/molecule/
+  roles/
 
 rules:
   braces:
