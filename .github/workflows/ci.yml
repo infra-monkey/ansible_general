@@ -12,27 +12,19 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
         with:
-          python-version: "3.8"
-
+          submodules: recursive
       - name: Run ansible-lint
         uses: ansible/ansible-lint-action@master
         with:
+          override-deps: |
+            rich>=9.5.1,<11.0.0
           targets: |
-            playbooks/*.yml
-            playbooks/*/*.yml
-      - name: Run yaml-lint
-        uses: ibiqlik/action-yamllint@v3
-        with:
-          file_or_dir: roles/
-          config_data: |
-            extends: default
-            rules:
-              line-length: disable
+            roles/*/*/*.yml
+          args: "--exclude roles/*/.github/ --exclude roles/*/molecule/"
       - name: Run Python linters
         uses: rjeffman/python-lint-action@v2
